@@ -656,7 +656,7 @@ def destroy(name):
         result = libcloudfuncs_destroy(newname, conn)
         ret.update({'Destroyed': result})
     except Exception as e:
-        if not e.message.startswith('OperationNotPermitted'):
+        if not str(e.message).startswith('OperationNotPermitted'):
             raise e
 
         log.info(

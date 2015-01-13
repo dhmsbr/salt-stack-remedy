@@ -311,7 +311,7 @@ def create(vm_):
             else:
                 raise SaltCloudNotFound(
                     'No such security group: \'{0}\''.format(
-                        group
+                        vg
                     )
                 )
 

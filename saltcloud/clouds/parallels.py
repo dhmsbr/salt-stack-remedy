@@ -38,7 +38,7 @@ import urllib
 import urllib2
 import logging
 import xml.etree.ElementTree as ET
-
+from saltcloud.clouds.ec2 import _xml_to_dict
 # Import salt cloud libs
 import saltcloud.utils
 import saltcloud.config as config
@@ -326,7 +326,7 @@ def create(vm_):
         if deployed:
             log.info('Salt installed on {0}'.format(vm_['name']))
             if __opts__.get('show_deploy_args', False) is True:
-                ret['deploy_kwargs'] = deploy_kwargs
+                data['deploy_kwargs'] = deploy_kwargs
         else:
             log.error(
                 'Failed to start Salt on Cloud VM {0}'.format(
