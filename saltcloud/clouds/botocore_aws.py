@@ -64,6 +64,7 @@ POST_IMPORT_LOCALS_KEYS = locals().copy()
 # Get logging started
 log = logging.getLogger(__name__)
 
+import botocore
 
 # Only load in this module if the AWS configurations are in place
 def __virtual__():

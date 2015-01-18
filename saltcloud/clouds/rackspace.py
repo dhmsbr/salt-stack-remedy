@@ -48,11 +48,11 @@ import sys
 from libcloud.compute.base import NodeState
 
 # Import generic libcloud functions
-from saltcloud.libcloudfuncs import *
+from salt.cloud.libcloudfuncs import *
 
 # Import saltcloud libs
-import saltcloud.config as config
-from saltcloud.utils import namespaced_function
+import salt.config as config
+from salt.cloud.utils import namespaced_function
 
 
 # Get logging started

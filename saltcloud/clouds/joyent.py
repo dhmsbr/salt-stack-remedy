@@ -40,6 +40,7 @@ import logging
 
 # Import generic libcloud functions
 from saltcloud.libcloudfuncs import *
+from saltcloud.exceptions import SaltCloudSystemExit
 
 # Import saltcloud libs
 import saltcloud.utils
