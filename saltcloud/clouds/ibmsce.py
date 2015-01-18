@@ -51,11 +51,20 @@ import logging
 from libcloud.compute.base import NodeAuthSSHKey
 
 # Import generic libcloud functions
-from saltcloud.libcloudfuncs import *
+from salt.cloud.libcloudfuncs import (
+    get_size,
+    get_image,
+    avail_images,
+    avail_sizes,
+    script,
+    destroy,
+    list_nodes,
+    list_nodes_full,
+    list_nodes_select)
 
-# Import saltcloud libs
-import saltcloud.config as config
-from saltcloud.utils import namespaced_function
+# Import saltcloud libs in salt...
+import salt.config as config
+from salt.utils import namespaced_function
 
 # Get logging started
 log = logging.getLogger(__name__)
